@@ -69,7 +69,9 @@
     "test-es6": "cd test/es6-config; npm test",
     "test-plugins": "cd test/with-plugins; npm test",
     "test-multi-entry": "cd test/with-multi-entry-plugin; npm test",
-    "e2e": "npm run test-default-es5 && npm run test-specified-es5 && npm run test-es6 && npm run test-plugins && npm run test-multi-entry"
+    "e2e": "npm run test-default-es5 && npm run test-specified-es5 && npm run test-es6 && npm run test-plugins && npm run test-multi-entry",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "ban-sensitive-files": "1.8.3",
@@ -92,6 +94,8 @@
     "minimist": "1.2.0",
     "ramda": "0.21.0",
     "rollup": "0.41.4",
-    "gaze": "1.1.2"
-  }
+    "gaze": "1.1.2",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
